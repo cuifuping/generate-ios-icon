@@ -51,9 +51,29 @@ public class ImageToIcon {
 		//都市绿源OAApp
 		//generateDslyOaAppIcon();
 		//三站一场管理系统App
-		generateMixingplantAppIcon();
+		//generateMixingplantAppIcon();
+		//一部OAapp
+		generateYibuOaAppIcon();
 		
 
+	}
+	/**
+	 * 一部OAapp
+	 * @date Dec 15, 2020
+	 * @author cuifuping
+	 * @throws IOException 
+	 */
+	private static void generateYibuOaAppIcon() throws IOException {
+		String rootPath = "E:\\cuifuping\\SynologyDrive\\bmrb\\一部OA_App\\";
+		String fileName = rootPath + "icon.png";
+		String targetFloat = rootPath + "icon\\";
+		ImageToIcon.scaleIcons(fileName, targetFloat);
+		String targetFloatIconSet = rootPath + "icon\\iconset\\";
+		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
+		String targetFloatImageSet = rootPath + "icon\\imageset\\";
+		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageSet);
+		String targetFloatAppStore = rootPath + "icon\\appstoreicon\\";
+		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);
 	}
 	/**
 	 * 三站一场管理系统App
